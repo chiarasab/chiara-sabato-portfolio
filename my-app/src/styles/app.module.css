@@ -1,0 +1,11 @@
+.header {
+    size: 75px;
+    margin: 5px;
+    align-self: auto;
+    color: white;
+}
+
+.body {
+    size: 20px;
+    margin: 5px;
+}

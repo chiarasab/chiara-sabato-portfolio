@@ -36,3 +36,33 @@
     transform: rotate(360deg);
   }
 }
+
+.header {
+  height: 75px;
+  margin-bottom: 120px;
+  background-color: var(--mantine-color-body);
+  border-bottom: 1px solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
+}
+
+.inner {
+  height: 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-link {
+  display: inline-block;
+  line-height: 1;
+  padding: 8px 12px;
+  border-radius: var(--mantine-radius-sm);
+  text-decoration: none;
+  color: light-dark(var(--mantine-color-white-7), var(--mantine-color-dark-0));
+  font-size: var(--mantine-font-size-sm);
+  font-weight: 500;
+}
+
+.nav-link.active {
+  background-color: var(--mantine-color-blue-filled);
+  color: var(--mantine-color-white);
+}

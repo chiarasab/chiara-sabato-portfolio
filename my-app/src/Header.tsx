@@ -4,11 +4,13 @@ import { Burger, Container, Group } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import classes from './styles/header.module.css';
 
+
+
 const links = [
-  { link: '/about', label: 'About Me' },
-  { link: '/projects', label: 'Projects' },
-  { link: '/portfolio', label: 'Portfolio' },
-  { link: '/contact', label: 'Contact' }
+  { link: '/about', label: 'Features' },
+  { link: '/pricing', label: 'Pricing' },
+  { link: '/learn', label: 'Learn' },
+  { link: '/community', label: 'Community' },
 ];
 
 export function Header() {
@@ -33,7 +35,7 @@ export function Header() {
   return (
     <header className={classes.header}>
       <Container size="md" className={classes.inner}>
-        <Group gap={5} visibleFrom="s">
+        <Group gap={5} visibleFrom="xs">
           {items}
         </Group>
 

@@ -15,11 +15,9 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  padding: 30px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -39,6 +37,7 @@
 
 .header {
   height: 75px;
+  margin-top: 120px;
   margin-bottom: 120px;
   background-color: var(--mantine-color-body);
   border-bottom: 1px solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
@@ -65,4 +64,19 @@
 .nav-link.active {
   background-color: var(--mantine-color-blue-filled);
   color: var(--mantine-color-white);
+}
+
+.logo {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  align-items: flex-start;
+  object-fit: cover;
+}
+
+body {
+  margin: 10px;
+  color: white;
+  padding: 0;
+  background-color: #282c34; /* Match your header background */
 }

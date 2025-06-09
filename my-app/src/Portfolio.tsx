@@ -7,7 +7,7 @@ import { Header } from './Header.tsx';
 export default function Portfolio() {
   return (
     <div>
-        <Header>Portfolio</Header>
+        <h1>Portfolio</h1>
     </div>
   );
 }

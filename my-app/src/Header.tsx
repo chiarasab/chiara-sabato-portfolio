@@ -1,16 +1,18 @@
 import * as React from 'react';
+import './App.css';
 import { useState } from 'react';
+import { MantineProvider } from '@mantine/core';
 import { Burger, Container, Group } from '@mantine/core';
+import { NavLink, Link } from "react-router-dom"
 import { useDisclosure } from '@mantine/hooks';
 import classes from './styles/header.module.css';
 
 
-
 const links = [
-  { link: '/about', label: 'Features' },
-  { link: '/pricing', label: 'Pricing' },
-  { link: '/learn', label: 'Learn' },
-  { link: '/community', label: 'Community' },
+  { link: '/about', label: 'About Me' },
+  { link: '/portfolio', label: 'Portfolio' },
+  { link: '/projects', label: 'Projects' },
+  { link: '/contact', label: 'Contact Me' },
 ];
 
 export function Header() {
@@ -18,29 +20,29 @@ export function Header() {
   const [active, setActive] = useState(links[0].link);
 
   const items = links.map((link) => (
-    <a
+    <NavLink
       key={link.label}
-      href={link.link}
-      className={classes.link}
-      data-active={active === link.link || undefined}
-      onClick={(event) => {
-        event.preventDefault();
-        setActive(link.link);
-      }}
+      to={link.link}
+      className={({ isActive }) =>
+        `${classes.link} ${isActive ? classes.active : ''}`
+      }
     >
       {link.label}
-    </a>
+    </NavLink>
   ));
 
   return (
-    <header className={classes.header}>
-      <Container size="md" className={classes.inner}>
-        <Group gap={5} visibleFrom="xs">
-          {items}
-        </Group>
-
-        <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="sm" />
-      </Container>
-    </header>
+    <MantineProvider>
+      <div className="App-header">
+        <Container size="md" className={classes.inner}>
+        <Link to="/">
+      <img src="/cs_logo.png" alt="Chiara Sabato Logo" className="logo" />
+    </Link>
+          <Group gap={5} visibleFrom="xs">
+            {items}
+          </Group>
+        </Container>
+      </div>
+    </MantineProvider>
   );
 }

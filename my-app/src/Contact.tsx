@@ -7,7 +7,7 @@ import { Header } from './Header.tsx';
 export default function Contact() {
   return (
     <div>
-        <Header>Contact</Header>
+        <h1>Contact</h1>
     </div>
   );
 }

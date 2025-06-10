@@ -15,9 +15,8 @@
 
 .App-header {
   background-color: #282c34;
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
+  padding: 40px;
+  display: block;
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -30,6 +29,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -67,16 +67,27 @@
 }
 
 .logo {
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
+  height: 120px;
+  width: 200px;
+  border-radius: 25%;
   align-items: flex-start;
   object-fit: cover;
+}
+
+.button-root {
+  height: 30px;
+  width: auto;
+  display: inline-block;
+  color: white;
+  background: #25ADF7;
+  border-color: #25ADF7;
+  border-radius: 20%;
 }
 
 body {
   margin: 10px;
   color: white;
   padding: 0;
-  background-color: #282c34; /* Match your header background */
+  background-color: #282c34;
+  /* Match your header background */
 }

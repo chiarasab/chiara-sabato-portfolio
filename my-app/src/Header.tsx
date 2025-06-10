@@ -16,9 +16,6 @@ const links = [
 ];
 
 export function Header() {
-  const [opened, { toggle }] = useDisclosure(false);
-  const [active, setActive] = useState(links[0].link);
-
   const items = links.map((link) => (
     <NavLink
       key={link.label}
@@ -36,7 +33,7 @@ export function Header() {
       <div className="App-header">
         <Container size="md" className={classes.inner}>
         <Link to="/">
-      <img src="/cs_logo.png" alt="Chiara Sabato Logo" className="logo" />
+      <img src="/cs_logo.jpg" alt="Chiara Sabato Logo" className="logo" />
     </Link>
           <Group gap={5} visibleFrom="xs">
             {items}

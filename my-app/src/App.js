@@ -1,6 +1,6 @@
 import './App.css';
-import { MantineProvider, Container, Grid } from '@mantine/core';
-import { Routes, Route, Router } from 'react-router-dom';
+import { MantineProvider, Container, Grid, Text } from '@mantine/core';
+import { Routes, Route } from 'react-router-dom';
 import About from './About.tsx';
 import Projects from './Projects.tsx';
 import Portfolio from './Portfolio.tsx';
@@ -15,21 +15,20 @@ function App() {
           <Route
               path="/"
               element={
-                <Grid grow gutter="xs">
-                  <Grid.Col span={4}>
+                <Grid grow gutter="xs" align='center'>
+                  <Grid.Col span="content">
                     <img
                       src="/full-well.jpg"
                       className="profile"
                       alt="Chiara Sabato"
-                      style={{ width: '400px', height: 'auto' }}
+                      style={{ width: '400px', height: 'auto', borderRadius: "15%" }}
                     />
                   </Grid.Col>
-                  <Grid.Col span={8}>
+                  <Grid.Col span="auto">
                     <h1>Hi! My name is Chiara Sabato.</h1>
-                    <p>
-                      I graduated from UNC in May 2025 with a BS in Computer
-                      Science with minors in Data Science and Italian.
-                    </p>
+                    <Text>
+                      
+                    </Text>
                   </Grid.Col>
                 </Grid>
               }

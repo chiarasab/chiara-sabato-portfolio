@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@gfazioli/mantine-text-animate": "^2.1.0",
     "@mantine/carousel": "^8.0.2",
     "@mantine/core": "^8.0.2",
     "@mantine/dates": "^8.0.2",

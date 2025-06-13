@@ -1,4 +1,6 @@
 import './App.css';
+import '@mantine/core/styles.css';
+import React, { useState } from 'react';
 import { MantineProvider, Container, Grid, Text } from '@mantine/core';
 import { Routes, Route } from 'react-router-dom';
 import About from './About.tsx';
@@ -8,6 +10,8 @@ import Contact from './Contact.tsx';
 
 
 function App() {
+  const [opened, setOpened] = useState(false);
+
   return (
     <div className="App">
       <MantineProvider withGlobalStyles withNormalizeCSS>
